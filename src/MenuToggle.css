@@ -1,0 +1,15 @@
+.content-body-paper{
+    height: 91%;
+}
+
+.content-footer{
+    height: 8%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    .footer-heading{
+        width: 80%;
+        text-align: center;
+        padding-top: 5px;
+    }
+}

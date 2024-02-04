@@ -25,8 +25,21 @@ module.exports = {
      {
        test: /\.css$/,
        use: ['style-loader', 'css-loader']
+     },
+     { 
+       test: /\.(png|jpg)$/, 
+       use: ['url-loader'] 
      }
+    
    ]
  },
  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
+ // resovle path dependencies
+ resolve: {
+  roots: [
+    path.resolve('./src/header'),
+    path.resolve('./public'),
+  ],
+  extensions: ["",'.js', '.jsx']
+}
 }
